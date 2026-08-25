@@ -1,0 +1,5 @@
+adjective_1 = input("Adjektiv 1: ")
+adjective_2 = input("Adjektiv 2: ")
+noun = input("Substantiv: ")
+verb = input("Verb: ")
+print(f"Hei på deg din {adjective_1}, {adjective_2} {noun}. Gå ut for å {verb}.")
