@@ -1,0 +1,23 @@
+import mysql.connector
+from mysql.connector import Error
+
+try:
+    print("Connecting to database...")
+    with mysql.connector.connect(
+        host="localhost",
+        port=3306,
+        user="root",
+        password="gokstad",
+        database="world"
+    ) as connection:
+        print("Connection successful!")
+        with connection.cursor() as cursor:
+            sql = ("SELECT Language, Percentage "
+                   "FROM countrylanguage "
+                   "WHERE CountryCode ='SWE'")
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            for lang, percentage in rows:
+                print(f"{lang}: {percentage}%")
+except Error as e:
+    print(f"Error using mySQL: {e}")
