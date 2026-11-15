@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/greet" method="get">
+<label for="greeting">
+Greet reciever
+</label>
+<input id="greeting"
+ name="guest"
+value="{{ name }}">
+<button type="submit">Greet</button>
+</form>
+<h1>Hello {{  name  }}!</h1>
+<a href="/">Home</a>
+<a href="/about">About</a>
+
+</body>
+</html>
